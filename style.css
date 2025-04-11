@@ -84,6 +84,97 @@ section{
     background-image: url(./img/background.svg);
     background-repeat: no-repeat;
     background-position: right top;
+    background-size: contain;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+
+.container-slogan{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 64px;
+}
+
+.slogan{
+    position: relative;
+    bottom: 90px;
+    font-size: 4rem;
+    font-weight: 400;
+    font-style: italic;
+    width: 568px;
+}
+
+.slogan span{
+    color: var(--primary-color);
+}
+
+.container-pizzas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pizza{
+    position: relative;
+    display: flex;
+    align-items: end;
+    border-radius: 12px;
+    overflow: hidden;
+
+}
+
+.add-pizza{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    border: 3px solid white;
+    color: white;
+    font-size: 2rem;
+    display: grid;
+    place-content: center;
+    transition: .5s;
+    opacity: 0;
+
+
+}
+
+.pizza:hover .add-pizza{
+    opacity: 1;
+
+}
+
+.container-info{
+    position: absolute;
+    height: 36px;
+    bottom: -36px;
+    width: 100%;
+    background-color: #0009;
+    transition: .5s;
+
+}
+
+.container-info span:nth-of-type(1){
+    font-size: 12px;
+    width: 40px;
+    height: 64px;
+    color: white;
+}
+
+.container-info span:nth-of-type(2){
+    width: 57px;
+    height: 20px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.pizza:hover .container-info{
+    bottom: 0;
+
 }
 
 .cardapio{
